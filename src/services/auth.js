@@ -1,5 +1,19 @@
 import api from './api';
 
+export const register = async (email, username, password) => {
+  try {
+    const response = await api.post('/auth/register', {
+      email,
+      username,
+      password,
+    });
+    return response.data;
+  } catch (error) {
+    console.error('회원가입 실패:', error);
+    throw error;
+  }
+};
+
 export const login = async (username, password) => {
   try {
     // URLSearchParams 사용

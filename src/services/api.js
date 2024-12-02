@@ -52,8 +52,8 @@ export const deleteReview = async (popupId, reviewId) => {
 
 // 관심 등록 관련 API
 export const getFavoritePopups = async () => {
-  const response = await api.get('/users/favorites');
-  return response.data;
+  const response = await api.get('/popups/user/favorites');
+  return response;
 };
 
 export const addToFavorites = async (popupId) => {

@@ -34,9 +34,11 @@ header {
 .logo h1 {
   margin: 0;
   font-size: 24px;
+  margin-right: 20px
 }
 
 nav {
+  align-items: center;
   display: flex;
   gap: 20px;
 }
@@ -188,7 +190,6 @@ form {
 }
 
 form input, form textarea {
-  margin-bottom: 10px;
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 4px;
@@ -204,7 +205,6 @@ form button {
 }
 
 .popup-detail-page img {
-  max-width: 100%;
   height: auto;
 }
 
@@ -224,4 +224,673 @@ form button {
   color: white;
   border: none;
   cursor: pointer;
+  margin-right: 20px;
+}
+
+.toggle-form-button {
+  margin-top: 1rem;
+  background-color: transparent;
+  border: none;
+  color: #4a90e2;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.toggle-form-button:hover {
+  color: #357abd;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.submit-button:hover {
+  background-color: #357abd;
+}
+
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: calc(100vh - 100px);
+  background-color: #f5f5f5;
+  padding: 40px 20px;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 40px;
+}
+
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.form-group input {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.1);
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  padding: 0.5rem;
+  background-color: #fde8e8;
+  border-radius: 4px;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.submit-button:hover {
+  background-color: #357abd;
+}
+
+.toggle-form-button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: transparent;
+  border: none;
+  color: #4a90e2;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.toggle-form-button:hover {
+  text-decoration: underline;
+}
+
+/* SearchBar 관련 CSS */
+.search-bar {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  max-width: 800px;
+}
+
+.search-container {
+  display: flex;
+  width: 100%;
+}
+
+.search-input {
+  flex: 1;
+  height: 36px;
+  padding: 0 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+
+.search-button {
+  height: 36px;
+  padding: 0 16px;
+  background: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* main.css에 추가 */
+.popup-report-page {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.popup-report-page h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.popup-report-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #555;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.1);
+}
+
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.submit-button:hover {
+  background-color: #357abd;
+}
+
+.error-message {
+  color: #e74c3c;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.success-message {
+  color: #2ecc71;
+  text-align: center;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: #f0fff4;
+  border-radius: 4px;
+}
+
+/* 마이페이지 스타일 */
+.my-page {
+  min-height: calc(100vh - 200px);
+  padding: 2rem;
+  background-color: #f5f5f5;
+}
+
+.my-page-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.my-page h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+.user-info-section {
+  margin-bottom: 2rem;
+}
+
+.info-group {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.info-group:last-child {
+  border-bottom: none;
+}
+
+.info-group label {
+  display: block;
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.info-group p {
+  color: #333;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.logout-button,
+.withdraw-button {
+  flex: 1;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.logout-button {
+  background-color: #4a90e2;
+  color: white;
+}
+
+
+.logout-button:hover {
+  background-color: #357abd;
+}
+
+.withdraw-button {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.withdraw-button:hover {
+  background-color: #c0392b;
+}
+
+.my-page.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+  color: #666;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .my-page {
+    padding: 1rem;
+  }
+
+  .my-page-container {
+    padding: 1.5rem;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+}
+
+/* 팝업 상세 페이지 스타일 */
+.popup-detail-page {
+  background-color: #f5f5f5;
+  min-height: calc(100vh - 60px);
+  padding: 2rem 1rem;
+}
+
+.popup-detail-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* 헤더 섹션 */
+.popup-header {
+  padding: 2rem;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.popup-title-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.popup-title-section h1 {
+  font-size: 2rem;
+  color: #333;
+  margin: 0;
+}
+
+.brand-name {
+  color: #666;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+/* 컨텐츠 섹션 */
+.popup-content {
+  padding: 2rem;
+}
+
+/* 이미지 섹션 */
+.popup-image-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  max-width: 800px; /* 이미지의 최대 너비 설정 */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.popup-main-image {
+  height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* 정보 섹션 */
+.popup-info-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.info-item span {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.info-item p {
+  color: #333;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* 설명 섹션 */
+.popup-description-section {
+  margin-bottom: 2rem;
+}
+
+.popup-description-section h2 {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.popup-description-section p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* 위치 섹션 */
+.popup-location-section {
+  margin-bottom: 2rem;
+}
+
+.popup-location-section h2 {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* 리뷰 섹션 */
+.popup-reviews-section {
+  margin-bottom: 2rem;
+}
+
+.popup-reviews-section h2 {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* 로딩 상태 */
+.popup-detail-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 60px);
+}
+
+.loading-spinner {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+/* 에러 상태 */
+.popup-detail-error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 60px);
+  color: #e74c3c;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .popup-detail-page {
+    padding: 1rem 0;
+  }
+
+  .popup-header {
+    padding: 1.5rem;
+  }
+
+  .popup-title-section h1 {
+    font-size: 1.5rem;
+  }
+
+  .popup-content {
+    padding: 1.5rem;
+  }
+
+  .popup-main-image {
+    height: 250px;
+  }
+
+  .popup-info-section {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+}
+
+/* 팝업 이미지 스타일 수정 */
+.popup-main-image {
+  height: 300px; /* 400px에서 300px로 줄임 */
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+/* 리뷰 섹션 스타일 */
+.reviews-section {
+  margin-top: 2rem;
+  background: #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.reviews-section h3 {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+/* 리뷰 작성 폼 */
+.review-form {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.rating-input {
+  margin-bottom: 1rem;
+}
+
+.rating-input label {
+  display: inline-block;
+  margin-right: 1rem;
+  color: #666;
+}
+
+.rating-select {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  min-width: 120px;
+}
+
+.review-textarea {
+  min-height: 100px;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  resize: vertical;
+}
+
+.review-textarea:focus {
+  outline: none;
+  border-color: #4a90e2;
+}
+
+.submit-review {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+}
+
+.submit-review:hover {
+  background-color: #357abd;
+}
+
+/* 리뷰 목록 */
+.reviews-list {
+  margin-top: 1.5rem;
+}
+
+.review-item {
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.review-item:last-child {
+  border-bottom: none;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.review-rating {
+  color: #f1c40f;
+  font-size: 0.9rem;
+}
+
+.review-date {
+  color: #888;
+  font-size: 0.8rem;
+}
+
+.review-content {
+  color: #333;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.no-reviews {
+  text-align: center;
+  color: #666;
+  padding: 2rem 0;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .popup-main-image {
+    height: 200px; /* 모바일에서는 더 작게 */
+  }
+
+  .reviews-section {
+    padding: 1rem;
+  }
+
+  .review-form {
+    padding: 1rem;
+  }
 }
