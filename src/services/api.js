@@ -83,7 +83,13 @@ export const searchByLocation = async (lat, lng, radius) => {
 
 // 제보 관련 API
 export const reportPopup = async (reportData) => {
-  const response = await api.post('/popups/report', reportData);
+  const response = await api.post('/popups/report', {
+    popup_name: reportData.popupName,
+    brand_name: reportData.brandName,
+    address: reportData.address,
+    period: reportData.period,
+    description: reportData.description
+  });
   return response.data;
 };
 
