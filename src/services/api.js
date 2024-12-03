@@ -26,8 +26,30 @@ export const getPopupDetails = async (id) => {
 };
 
 export const createPopup = async (popupData) => {
-  const response = await api.post('/popups', popupData);
-  return response.data;
+  // 백엛드 API와 일치하는 형식으로 데이터 변환
+  const formattedData = {
+    title: popupData.popupName,
+    brand_name: popupData.brandName,
+    description: popupData.description,
+    address: popupData.address,
+    latitude: popupData.lat,
+    longitude: popupData.lng,
+    operating_hours: popupData.operatingHours,
+    // 직접 startDate와 endDate 사용
+    start_date: new Date(popupData.startDate).toISOString(),
+    end_date: new Date(popupData.endDate).toISOString(),
+    image_url: null // 기본값
+  };
+
+  try {
+    console.log('Sending data to API:', formattedData); // 디버깅용
+    const response = await api.post('/popups/', formattedData);
+    return response.data;
+  } catch (error) {
+    console.error('API 요청 데이터:', formattedData);
+    console.error('API 에러 응답:', error.response?.data);
+    throw new Error(error.response?.data?.detail || '팝업스토어 생성에 실패했습니다');
+  }
 };
 
 export const updatePopup = async (id, popupData) => {
@@ -83,7 +105,7 @@ export const searchByLocation = async (lat, lng, radius) => {
 
 // 제보 관련 API
 export const reportPopup = async (reportData) => {
-  const response = await api.post('/popups/report', {
+  const response = await api.post('/popups/report-popup', {
     popup_name: reportData.popupName,
     brand_name: reportData.brandName,
     address: reportData.address,
